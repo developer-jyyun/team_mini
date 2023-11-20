@@ -31,7 +31,6 @@ const MainRouter = () => {
       <Routes>
         <Route path="/" element={<Dashboard />}>
           <Route index element={<Main />} />
-          <Route path="/main" element={<Main />} />
           <Route path="/detail/:productId" element={<Detail />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/payment" element={<Payment />} />
