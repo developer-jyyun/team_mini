@@ -1,12 +1,12 @@
 # 야놀자테크캠프 미니프로젝트 1조 💸 TR1LL1ON 프론트엔드
 
-<!-- <br>
-<div>
-  <a href="https://fe-market-clone.vercel.app/" target="_blank">
-    <img src="https://img.shields.io/badge/배포 링크-ed234b?style=for-the-badge&logoColor=white" alt="example"/>
+<div align="center">
+<p align="left">
+  <a href="https://tr1ll1on.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/TR1LL1ON-white?style=for-the-badge&logoColor=white" alt="page"/>
   </a>
+</p>
 </div>
-<br> -->
 
 ### 0️⃣ Git convention
 
