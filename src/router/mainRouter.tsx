@@ -1,0 +1,45 @@
+import { Outlet, Route, Routes } from 'react-router-dom';
+import styled from 'styled-components';
+import Header from '../components/layout/header';
+import Footer from '../components/layout/footer';
+import Cart from '../pages/cart/cart';
+import Detail from '../pages/detail/detail';
+import Main from '../pages/main/main';
+import Mypage from '../pages/mypage/mypage';
+import Payment from '../pages/payment/payment';
+
+const Grid = styled.div`
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-content: center;
+  justify-items: center;
+`;
+
+function Dashboard() {
+  return (
+    <Grid>
+      <Header />
+      <Outlet />
+      <Footer />
+    </Grid>
+  );
+}
+
+const MainRouter = () => {
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<Dashboard />}>
+          <Route index element={<Main />} />
+          <Route path="/main" element={<Main />} />
+          <Route path="/detail/:productId" element={<Detail />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/payment" element={<Payment />} />
+          <Route path="/mypage" element={<Mypage />} />
+        </Route>
+      </Routes>
+    </>
+  );
+};
+
+export default MainRouter;
