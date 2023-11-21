@@ -8,13 +8,6 @@ import Main from '../pages/main/main';
 import Mypage from '../pages/mypage/mypage';
 import Payment from '../pages/payment/payment';
 
-const Grid = styled.div`
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  align-content: center;
-  justify-items: center;
-`;
-
 function Dashboard() {
   return (
     <Grid>
@@ -42,3 +35,10 @@ const MainRouter = () => {
 };
 
 export default MainRouter;
+
+const Grid = styled.div`
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-content: center;
+  justify-items: center;
+`;
