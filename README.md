@@ -10,7 +10,7 @@
     <img src="https://img.shields.io/badge/TR1LL1ON-skyblue?style=for-the-badge&logoColor=white" alt="site"/>
   </a>
 </p>
-
+<p> 현재 TR1LL1ON 서버의 종료로 배포 사이트 확인이 불가합니다. <br> 추후 mock 데이터 생성을 통해 페이지 확인이 가능하도록 보완할 계획입니다. </p>
 </div>
 
 <br/>
@@ -241,7 +241,36 @@ feature/#이슈번호
 
 <br/>
 
-## 🧑🏻‍💻 팀 소개 및 역할
+## 담당 페이지 : 숙소 상세 페이지
+![](https://velog.velcdn.com/images/developer-jyyun/post/68adb702-5b1b-4d31-a979-d2821815687d/image.png)
+
+
+### 추가 리팩토링 작업
+- 숙소/객실 별 리뷰 정렬 기능 추가 (최신순 /오래된순/평점 높은순/ 평점 낮은순)
+- 숙소/객실 별 리뷰 페이지네이션 추가 
+- 로딩 스피너 적용
+
+
+### 아쉬운 점
+
+- msw 사용
+api 완성 전까지는 퍼블리싱 작업만 계획되어있었는데, 생각보다 api 완성이 늦어져 갑작스레 msw 도입을 결정하게 되었다. 처음부터 msw를 도입하기로 계획했다면 작업 시간의 공백을 더욱 효율적으로 활용할 수 있었을 것 같다. 
+또한 초반 api 명세서를 보며 msw 사용하여 작업하였는데, 백엔드 작업의 변동사항들이 공유되지 않아 변수명, 인터페이스의 수정사항들이 많이 생기게 되어 msw의 이점을 많이 활용하지 못한 점이 아쉽다. 
+ 
+- react query
+작업 후반부에 use Effect를 사용하여 가져오던 데이터를 모두 react query를 사용한 코드로 바꾸었다. 급하게 변경된 탓에 리액트 쿼리의 다양한 기능들을 충분히 숙지하고 사용하지 못한 것 같아 아쉽다. Suspense, error boundary에 대해 더 공부해 본 뒤 다음프로젝트에 적용할 수 있으면 좋을 것 같다. 또한 컴포넌트 내에서 리액트쿼리를 사용하였는데, 커스텀훅으로 분리했다면 재사용성 측면에서 더욱 좋았을 것 같다는 아쉬움이 남는다.
+
+- 기능별 커밋
+커밋을 더 자주, 작은 기능 단위로 할 수 있도록 신경쓰는 것이 좋겠다.
+
+### 느낀점
+그동안은 기능 구현에만 치우쳐 코드를 작성했는데, useMemo, useCallback와 같은 성능 최적화 훅들을 적절히 사용하고, 코드 가독성, 유지보수, 재사용 측면에 대해서도 깊이 고민해보며 클린코드를 작성할 수 있도록 하는 것이 좋겠다.
+
+<br><br>
+<details>
+  <summary>
+  ## 🧑🏻‍💻 팀 소개 및 역할
+  </summary>
 
 ### ✨ 팀 소개
 
@@ -250,6 +279,9 @@ feature/#이슈번호
 |                            ![leHiHo](https://avatars.githubusercontent.com/leHiHo)                            |                             ![joanShim](https://avatars.githubusercontent.com/joanShim)                              | ![JiHongkyu](https://avatars.githubusercontent.com/JiHongkyu) |    ![developer-jyyun](https://avatars.githubusercontent.com/developer-jyyun)    | ![Gaoridang](https://avatars.githubusercontent.com/Gaoridang) |
 |                                      [leHiHo](https://github.com/leHiHo)                                      |                                       [joanShim](https://github.com/joanShim)                                        |           [JiHongkyu](https://github.com/JiHongkyu)           |              [developer-jyyun](https://github.com/developer-jyyun)              |           [Gaoridang](https://github.com/Gaoridang)           |
 | <ul><li>초기설정</li><li>배포</li><li>모킹서버</li><li>리뷰 CRUD</li><li>객실 상세</li><li>예약내역</li></ul> | <ul><li>메인화면</li><li>검색(전체,카테고리,지역별)</li><li>캘린더(체크인/체크아웃)</li><li>지도(숙소위치)</li></ul> |  <ul><li>로그인</li><li>회원가입</li><li>장바구니</li></ul>   | <ul><li>숙소상세</li><li>리뷰조회</li><li>게스트모달</li><li>편의시설</li></ul> |            <ul><li>결제</li><li>카테고리</li></ul>            |
+</details>
+
+
 
 <br>
 
